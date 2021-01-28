@@ -1,0 +1,19 @@
+<template name="postItem">
+  <view class="post-container">
+    <view class="post-author-date">
+      <image class="post-author" src="{{img.author_img}}"></image>
+      <text class="post-date">{{date}}</text>
+      <!--if后面如果不为空就显示该条语句 
+        双花括号：从data里面取数据 -->
+    </view>
+    <text class="post-tittle">{{tittle}}</text>
+    <image class="post-image" src="{{img.tittle_img}}"></image>
+    <text class="post-content">{{content}}</text>
+    <view class="post-like">
+      <image class="post-like-image" class="post-like-image" src="{{img.collect_img}}"></image>
+      <text class="post-like-text">{{collect_num}}</text>
+      <image class="post-like-image" src="{{img.read_img}}"></image>
+      <text>{{views[index]==null?0:views[index]}}</text>
+    </view>
+  </view>
+</template>

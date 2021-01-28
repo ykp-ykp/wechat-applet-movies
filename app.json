@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/posts/posts",
+    "pages/welcom/welcom",
+    "pages/posts/post-detail/post-detail",
+    "pages/movies/movies",
+    "pages/movies/more-movie/more-movie"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#405f80"
+  },
+  "tabBar": {
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+      {
+        "注释": "小程序希望list的第一个选项卡是pages里的第一个（首页）",
+        "pagePath": "pages/posts/posts",
+        "text": "阅读",
+        "iconPath": "/image/icon/reading.png",
+        "selectedIconPath": "/image/icon/reading.png"
+      },
+      {
+        "pagePath": "pages/movies/movies",
+        "text": "电影",
+        "iconPath": "/image/icon/movies.png",
+        "selectedIconPath": "/image/icon/movies.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap92.json"
+}

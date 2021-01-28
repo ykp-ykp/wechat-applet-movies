@@ -1,0 +1,29 @@
+/* pages/stars/starts.wxss */
+/* 重点 */
+/* 重点 */
+/* 重点：因为这是一个模板，最终是在movies.wxml中使用这个模板的的，所以需要在movie.wxss中引用该文档：stars-template.wxss （同一个文件夹下不需要引用）*/
+
+
+.stars-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.stars{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 17rpx;
+  margin-right: 24rpx;
+}
+
+/* .start下面的所有字元素image */
+.stars image{
+  padding-left: 3rpx;
+  height: 17rpx;
+  width: 17rpx;
+}
+
+.star-score{
+  color: #1f3463;
+}

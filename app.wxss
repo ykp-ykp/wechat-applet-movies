@@ -1,0 +1,5 @@
+text{
+  font-family: MicroSoft Yahei;
+  font-size: 24rpx;
+}
+/* 作用于全局的text字体 */

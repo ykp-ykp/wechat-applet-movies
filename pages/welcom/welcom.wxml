@@ -1,0 +1,15 @@
+<view class="container">
+  <!-- 图片的默认宽度为300px，高度为225px -->
+  <!-- 注意：示用rpx可以自适应机型，或者使用100px（除以二，并且只有iphone6才是2倍关系） -->
+  <!-- 内敛<image style="width:200rpx;height:200rpx" src="/image/33.jpg"></image> -->
+
+  <image class="user_avatar" src="/image/head-image/girl2.png"></image>
+
+  <text class="user_name">Hello，七月</text>
+  
+  <!-- catch:tap(阻止事件的冒泡)/bind:tap（事件可以向上冒泡触发） -->
+  <view class="moto-container" bind:tap="onTap">
+    <text class="moto">开启小程序之旅</text>
+  </view>
+
+</view>

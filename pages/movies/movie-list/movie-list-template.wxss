@@ -1,0 +1,43 @@
+@import "../movie/movie-template.wxss";
+
+.movie-list-container{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-head{
+  padding: 30rpx 20rpx 22rpx 20rpx;
+  /* display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 让元素两端对齐 */
+}
+
+.slogan{
+  font-size: 24rpx;
+}
+
+.more{
+  float: right;
+  margin-right: 20rpx;
+  /* vertical-align: middle;在盒子模型里的元素这个属性会失效 */
+}
+
+.more-text{
+  font-size: 24rpx;
+  color: #1f4ba5;
+  vertical-align: middle;
+}
+
+.more-img{
+  width: 9rpx;
+  height: 16rpx;
+  vertical-align: middle;
+}
+
+.movies-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

@@ -1,0 +1,15 @@
+<template name="starsTemplate">
+  <view class="stars-container">
+    <view class="stars">
+      
+      <block wx:for="{{star}}">
+        <image src="/image/icon/star.png"></image>
+      </block>
+      <block wx:for="{{5-star}}">
+        <image src="/image/icon/none-star.png"></image>
+      </block>
+
+    </view>
+    <text class="star-score">{{score}}</text>
+  </view>
+</template>

@@ -1,0 +1,12 @@
+<import src="../movie/movie-template.wxml"></import>
+<template name="movieGridTemplate">
+  <!--scroll-view下滑到底可以触发函数onScrollLower，从而在里面编写获取更多数据  
+  需要给scroll-view一个固定高度，通过 WXSS 设置 height，才能触发下滑到底-->
+  <scroll-view class="grid-container"  scroll-x="true" scroll-y="true" bindscrolltolower="onScrollLower">
+    <block wx:for="{{movies}}" wx:for-item="movie">
+      <view class="single-view-container">
+        <template is="movieTemplate" data="{{movie}}" />
+      </view>
+    </block>
+  </scroll-view>
+</template>

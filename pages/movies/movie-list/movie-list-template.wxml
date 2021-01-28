@@ -1,0 +1,19 @@
+<import src="../movie/movie-template.wxml" />
+
+<template name="movieListTemplate">
+  <view class="movie-list-container">
+    <view class="movie-head">
+      <text class="slogan">{{movieTheme}}</text>
+      <view catch:tap="onMoreTap" class="more" data-movieTheme="{{movieTheme}}">
+        <text class="more-text">更多</text>
+        <image class="more-img" src="/image/icon/arrow-right.png"></image>
+      </view>
+    </view>
+    <view class="movies-container">
+      <block wx:for="{{movies}}" wx:for-item="movie">
+        <!-- 一个电影列表出现三个电影（movies里面有3个电影数据） -->
+        <template is="movieTemplate" data="{{movie}}"/>
+      </block>
+    </view>
+  </view>
+</template>

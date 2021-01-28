@@ -1,0 +1,52 @@
+@import "movie-list/movie-list-template.wxss";
+@import "movie-grid/movie-grid-template.wxss";
+/* 值引用它使用的模板所在的路径，不关心他引用的模板是否还引用了其他的模板，如果有
+就依次引用 （层层嵌套）*/
+.container{
+  background-color: #d8d8d8;
+}
+
+.movies-template{
+  margin-bottom: 30rpx;
+}
+
+.search{
+  background-color: #f2f2f2;
+  height: 80rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.search input{
+  height: 100%;
+  width: 600rpx;
+  margin-left: 20px;
+  font-size: 28rpx;
+}
+
+.search-icon-img{
+  margin: auto 0 auto 20rpx;
+}
+
+.cancleImg{
+    height: 40rpx;
+    width: 40rpx;
+    margin: 20rpx 10rpx;
+}
+
+.placeholder{
+font-size: 14px;
+  color: #d1d1d1;
+  margin-left: 20rpx;
+}
+
+.movies-template{
+  margin-bottom: 30rpx;
+}
+
+.search-panel{
+  position: absolute;
+  top: 80rpx;
+  /* 80是上面那个搜索框的高度 */
+}

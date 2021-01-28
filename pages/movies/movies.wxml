@@ -1,0 +1,25 @@
+<import src="movie-list/movie-list-template.wxml"/>
+<import src="movie-grid/movie-grid-template.wxml"/>
+
+<view class="search"><!-- 搜索框 -->
+  <icon class="search-icon-img" type="search" size="14"></icon>
+  <input  placeholder="武汉日夜、心灵奇旅"  placeholder-class="placeholder" bindfocus="onBindFocus" bindblur="onBindBlur"/>
+  <image wx:if="{{searchPanelShow}}" src="/image/icon/cancle.png" class="cancleImg" bindtap="onCancelImgTap"></image>
+</view>
+
+<view class="container" wx:if="{{containerShow}}"><!-- 刚加载进来的时候的电影页面 -->
+   <!-- template是个模板真正在运行的时候不会显示template元素，所以在template标签上使用class的css属性无效，解决方法就是在template外面套一个view标签，把属性给view标签 -->
+  <view class="movies-template">
+    <template is="movieListTemplate" data="{{movies: inTheaters,movieTheme:'正在热映'}}"></template>
+  </view>
+  <view class="movies-template">
+    <template is="movieListTemplate" data="{{movies: comingSoon,movieTheme:'即将上映'}}"></template>
+  </view>
+  <view class="movies-template">
+    <template is="movieListTemplate" data="{{movies: top250,movieTheme:'top250'}}"></template>
+  </view>
+</view>
+
+<view class="search-panel" wx:if="{{searchPanelShow}}"><!-- 搜索结果 -->
+  <template is="movieGridTemplate" data="{{movies: searchMovie}}"></template>
+</view>

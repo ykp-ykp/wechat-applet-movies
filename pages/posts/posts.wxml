@@ -1,0 +1,31 @@
+<import src="post-item-template/post-item-template.wxml"></import>
+<!-- 引用模板wxml -->
+
+<view>
+  <!-- swiper是滑动容器 -->
+  <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="5000" vertical="{{false}}">
+    <!-- 注意这里的true或false并不是布尔类型，所以只要引号里面有任何字符都被认为是真，
+    只有当引号里面的字符是空的时候才被认为是假如autoplay里面的字符只要不是空的，他都会自动播放 -->
+    <swiper-item>
+      <image catch:tap="onpostTap" src="/image/2.jpg" data-postid="3"></image>
+    </swiper-item>
+    <swiper-item>
+      <image catch:tap="onpostTap" src="/image/1.jpg" data-postid="4"></image>
+    </swiper-item>
+    <swiper-item>
+      <image catch:tap="onpostTap" src="/image/4.jpg" data-postid="5"></image>
+    </swiper-item>
+  </swiper>
+
+
+  <!-- 下面是文章 -->
+  <block wx:for="{{posts_key}}" wx:for-item="item" wx:for-index="idx">
+    <!-- for-item是数组中的元素默认是item，for-index是数组的序号默认是index -->
+    <view catch:tap="onpostTap" data-postid="{{item.postid}}">
+      <!-- template模板传递多个值 -->
+      <template is="postItem" data="{{...item,...{views:views,index:idx} }}"></template>
+    </view>
+  <!-- 引用template模板postItem，并传递数据item（数组元素） ，...item可以展开数组，在wxml饮用的时候直接用元素名就行，不需要加item.-->
+</block>
+
+</view>

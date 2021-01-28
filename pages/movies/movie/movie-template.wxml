@@ -1,0 +1,10 @@
+<import src="../stars/stars-template.wxml"/>
+
+<template name = "movieTemplate">
+  <view class="movie-container">
+    <image class="movie-img" src="{{movie.coverageUrl}}"></image>
+    <text class="movie-title" >{{movie.title}}</text>
+    <template is="starsTemplate" data="{{...movie}}"/>
+    <!-- 这里做数据绑定的时候使用...是展开作用。在下一个页面可以直接引用title而不需使用movie.title。当然也可以不使用... -->
+  </view>
+</template>

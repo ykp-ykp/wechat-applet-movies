@@ -1,0 +1,22 @@
+<view class="container">
+  <image src="{{detail.img.tittle_img}}" class="head-image"></image>
+  <!-- 下面注意双括号的位置 -->
+  <image catch:tap = "onMusicTap" class="audio" src="{{isPlayingMusic?'/image/icon/music-stop.png': '/image/icon/music-start.png'}}"></image>
+  <view class="author-data">
+    <image src="{{detail.img.author_img}}" class="avatar"></image>
+    <text class="author-name">{{detail.author_name}}</text>
+    <text class="const-text">{{detail.consttext}}</text>
+    <text class="date">{{detail.datetime}}</text>
+  </view>
+  <text class="tittle">{{detail.tittle}}</text>
+  <view class="tool">
+    <view class="circle-image">
+    <!-- wx:if""，双引号里面只要不为空就是真。wx:if"{{}}",双括号里面只有为false是才为假，其余为真。一般使用双括号方式 -->
+      <image wx:if="{{collected}}" catch:tap="onCollectionTap" class="collect-image" src="/image/icon/collect2.png"></image>
+      <image wx:else catch:tap="onCollectionTap" class="collect-image" src="/image/icon/collect1.png"></image>
+      <image catch:tap="onShareTap" class="share-image" src="/image/icon/share.png"></image>
+    </view>
+    <view class="horizon"></view>
+  </view>
+  <text class="content">{{detail.detail}}</text>
+</view>
